@@ -1,0 +1,79 @@
+asyncapi: 2.2.0
+info:
+  title: 3DV Events AsyncApi
+  version: 1.0.0
+  description: 3DV Events AsyncAPI
+
+servers:
+  aws:
+    url: ''
+    protocol: SNS
+
+channels:
+  tag:
+    description: 3dv events asyncapi
+  administratorRegistered:
+    publish:
+      message:
+        $ref: '#/components/messages/administratorRegisteredEvent'
+  userRegistered:
+    publish:
+      message:
+        $ref: '#/components/messages/administratorRegisteredEvent'
+
+
+
+components:
+  messages:
+    administratorRegisteredEvent:
+      payload:
+        type: object
+        properties:
+          data:
+            type: object
+            properties:
+                type:
+                  type: string
+                  default: 'administratorRegistered'
+                occuredOn:
+                  type: string
+                id:
+                  type: string
+                attributes:
+                  type: object
+                  properties:
+                    administrator:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        firstName:
+                          string:
+                        email:
+                          type: string
+    userRegisteredEvent:
+      payload:
+        type: object
+        properties:
+          data:
+            type: object
+            properties:
+                type:
+                  type: string
+                  default: 'userRegistered'
+                occuredOn:
+                  type: string
+                id:
+                  type: string
+                attributes:
+                  type: object
+                  properties:
+                    user:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        firstName:
+                          string:
+                        email:
+                          type: string
