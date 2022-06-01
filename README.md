@@ -1,6 +1,6 @@
 # TriviaDelGenioAsyncAPI
 
-_Please visit: [TriviaDelGenioAsyncAPI](https://yisusyaro.github.io/3DVEventsAsyncAPI/)_ 🚀
+_Please visit: [TriviaDelGenioAsyncAPI](https://yisusyaro.github.io/3DVEventsAsyncApi/)_ 🚀
 
 ## Built with 🛠️
 
