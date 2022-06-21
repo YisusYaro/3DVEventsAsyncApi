@@ -5,23 +5,21 @@ info:
   description: 3DV Events AsyncAPI
 
 servers:
-  aws:
-    url: ''
+  topicServer:
+    url: 'Amazon Simple Notification Service (SNS)'
     protocol: SNS
 
 channels:
   tag:
     description: 3dv events asyncapi
   administratorRegistered:
-    publish:
+    subscribe:
       message:
         $ref: '#/components/messages/administratorRegisteredEvent'
   userRegistered:
-    publish:
+    subscribe:
       message:
         $ref: '#/components/messages/administratorRegisteredEvent'
-
-
 
 components:
   messages:
