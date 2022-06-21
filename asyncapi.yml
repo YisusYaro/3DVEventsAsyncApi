@@ -9,9 +9,12 @@ servers:
     url: 'Amazon Simple Notification Service (SNS)'
     protocol: SNS
 
+tags:
+  - name: Domain Events
+
 channels:
   tag:
-    description: 3dv events asyncapi
+    $ref: '#tags/user'
   administratorRegistered:
     subscribe:
       message:
